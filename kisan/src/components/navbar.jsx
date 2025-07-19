@@ -18,7 +18,7 @@ import {
   MessageCircle,
   FileText
 } from 'lucide-react';
-import './Navbar.css';
+import './navbar.css';
 
 const Navbar = ({ openLoginModal, openRegisterModal }) => {
   const { isAuthenticated, user, logout } = useAuth();
