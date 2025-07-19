@@ -80,3 +80,40 @@ MIT License
 
 ---
 For detailed API documentation, see the backend route and controller files. 
+
+# Deployment Instructions
+
+## Backend (Render)
+1. Push your code to GitHub.
+2. Create a new Web Service on [Render](https://render.com/).
+3. Set the root directory to `server/`.
+4. Set the build command: `npm install`
+5. Set the start command: `node server.js`
+6. Add environment variables (see `server/.env.example`):
+   - `PORT` (Render sets this automatically)
+   - `MONGO_URI`
+   - `FRONTEND_URL` (your Netlify site URL, e.g. `https://your-frontend.netlify.app`)
+   - Any other secrets (SMTP, Cloudinary, etc.)
+
+## Frontend (Netlify)
+1. Push your code to GitHub.
+2. Create a new site on [Netlify](https://netlify.com/) from your GitHub repo.
+3. Set the base directory to `kisan/`.
+4. Set the build command: `npm run build`
+5. Set the publish directory: `dist` (Vite default)
+6. Add environment variable (see `kisan/.env.example`):
+   - `VITE_API_BASE_URL` (your Render backend URL, e.g. `https://your-backend.onrender.com/api/v1`)
+
+## Environment Variables
+- Copy `.env.example` files to `.env` in both `server/` and `kisan/` and fill in real values.
+- Never commit real secrets to GitHub.
+
+## CORS
+- The backend uses the `FRONTEND_URL` variable to allow requests from your Netlify site.
+
+## API URLs
+- The frontend uses `VITE_API_BASE_URL` to call the backend. Update this in Netlify settings after deploying backend.
+
+## Notes
+- After deploying backend, update the frontend’s API URL and redeploy if needed.
+- For local development, defaults are set for localhost. 

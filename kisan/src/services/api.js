@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:4000/api/v1';
+// IMPORTANT: Set VITE_API_BASE_URL in your Netlify environment variables to your Render backend URL for production
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:4000/api/v1';
 
 // Create axios instance
 const api = axios.create({

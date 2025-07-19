@@ -16,6 +16,7 @@ export const app=express();
 config({path:"./config/config.env"})
 
 // CORS configuration
+// IMPORTANT: Set FRONTEND_URL in your environment variables to your Netlify site URL for production
 app.use(cors({
   origin: process.env.FRONTEND_URL || "http://localhost:5173",
   credentials: true,
