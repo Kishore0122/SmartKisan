@@ -4,7 +4,7 @@
 Smart Kisan Assistant is an AI-powered digital platform designed to revolutionize Indian agriculture. It provides instant crop disease diagnosis, real-time market intelligence, AI voice assistant, and government scheme navigation in multiple languages.
 
 ## Architecture
-- **Frontend:** React (Vite), modular components, Tailwind CSS, React Router, Chart.js, Lucide React icons, React Toastify, Firebase integration.
+- **Frontend:** React (Vite), modular components, Tailwind CSS, React Router, Chart.js, Lucide React icons, React Toastify, JWT Authentication.
 - **Backend:** Node.js, Express.js, MongoDB (Mongoose), JWT authentication, bcrypt, Cloudinary, Google Cloud AI, Firebase Admin.
 - **AI/ML Services:** Google Vertex AI, custom ML models for disease and market prediction, voice assistant (Gemini API, local LLMs), NLP, and web scraping.
 
