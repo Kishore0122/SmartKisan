@@ -4,7 +4,7 @@
   "main": "server.js",
   "type": "module",
   "engines": {
-    "node": "18.x"
+   "node": ">=20.18.1"
   },
   "dependencies": {
     "@google-cloud/speech": "^6.0.0",
@@ -46,3 +46,4 @@
   "license": "ISC",
   "description": "Backend server for Project Kisan - AI-powered farmer assistant"
 }
+ 
